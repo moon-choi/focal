@@ -1,0 +1,64 @@
+
+net.createSever <-- without spinning up express.
+
+// CRUD
+Create, Read, Update, Delete
+
+//BROWSE
+
+Browse, Read, Edit, Add, Delete 
+
+//app.get ("/", (req, res) => {} )
+if you want anything to happen, 
+
+
+//Template engine: EJS
+
+
+
+//res.json: converting to json. 
+
+              sits in between frontend and backend
+// request --- [middleware]  ---response
+not givine a specific path.
+
+let count = 0; 
+app.use((req, res, next) => {
+  console.log(`hit counter: ${count++}`)
+  next()
+})
+
+whenever we finish doing anything. 
+
+
+// res.render vs res.redirect
+
+//alligator tag: only accepts keys in objects.
+
+- reading: <%= -> output somthing
+- logic: <% put logic %>
+--   <% for(let url in urls) { %>
+
+// form needs:
+- method
+- action: target place 
+- input
+- button (submit)
+
+//res.render: always send data. 
+
+
+//endpoint : needed in 2 places for app.get / app.post / api endpoint
+destination page.
+
+
+//request is an object that has a key called 'body'
+- we need to tell express server how to handle body.
+
+
+
+// how to add a partial to every page. insert this in other pages' ejs.
+<%- include('./partials/_header.ejs') %>
+
+// req.body. xxx => only looks at name attribute
+

@@ -1,0 +1,41 @@
+//iteration methods
+  .forEach
+  for c-style
+  while
+
+
+//shortcuts for c-style
+  for..of: Arrays or Strings (don't need index)
+  for..in: Object (keys), Arrays
+
+// Object.keys
+// Object.values
+// Object.entries
+
+// every iteration has its own scope, thats why you can use for (const key of object). 
+// for c style: we change the i every time, therefore it should be let.
+
+//function definitions are hoisted
+  we can put myFunction() at the very top before defining it. 
+
+//dont write function definition -- it's evil -- because it's hoisted
+
+//function definition
+  function myFunc() {}
+
+//function expressions
+  const myFunc = func() {}
+  const myFunc = () => {}
+
+//.forEach(value, index, array) <- order of parameters matter because it's builtin, and we should respect it. 
+
+// but for callback functions <- order of callback functions don't matter
+
+
+//Higher order functions : they will not complete a task by themselves.
+  1. Needs a callback function to be complete
+    e.g. forEach(arr, callback)
+  2. HOF will generate a function definition 
+    ??
+
+//Complex conditions

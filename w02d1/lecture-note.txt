@@ -1,0 +1,21 @@
+// to remove white spaces
+  .spilit(‘ ‘).join(‘’)
+  .replace(/\s+/g, '')
+
+// .reverse() is only for array.
+
+
+// npm: node package manager. 
+
+// npm init: ask questions, and create a package.json
+
+
+package.son: only the ones you're using for the program. list of things that track things. 
+-lock: dependencies of dependencies..
+
+npm init : package .json
+npm install: creates package=lock.json
+
+//chai
+
+.strictEqual: only for primitive data types. 

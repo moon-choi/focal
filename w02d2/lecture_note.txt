@@ -1,0 +1,24 @@
+//
+
+javascript is a blocking code; they are tying up things
+
+
+// modejs.org/api/fs.html 
+
+[options] : means configuration
+
+Buffer: intermediate value
+
+fs.readFileSync: hexadecimal buffer - it doesn't know how to convert it. it doesn't know what we want to do with it.
+>>so you add { encoding: }
+ASCII (애스키): doesn't allow many characters.
+UTF-8 can handle more languages, symbols, emojis.
+
+//error first callback 
+
+//asynchronous: something that doesn't finish up NOW 
+
+// the first argument  : null or err HAS to exist.
+
+//async functions: we queue it up but we may or may not run it.
+

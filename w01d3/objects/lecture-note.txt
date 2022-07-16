@@ -1,0 +1,62 @@
+/* eslint-disable use-isnan */
+NaN === NaN; // number
+typeof NaN; // false
+
+Number.MAX_SAFE_INTEGER; //if you need number bigger than 9007199254740991
+
+//how to create bigint
+// add +n 
+
+5n > 9007199254740991; //false 
+5n < 9007199254740991;// true
+
+Symbol: // guaranteed to give you an unique value.
+  Symbol('hello') === Symbol('hello') //false 
+
+// console is an object.
+  
+//primitives: null, undefined, number, bigint, string, booleans, Symbol
+//everything else is an object. 
+
+//hallmarks of primitive data type  
+- directly in the memory 
+- immutable: cannot be changed. 
+
+const myWord = 'hello'
+myWord[0] = 'j'
+console.log(myWrod) // still prints hello
+let mynum = 5 // it discards this value, completely throws out
+myNum = 7 // replace this with new value. it's not 'changed' 
+console.log(myNum) // 7
+
+//data structure: collection of values (arrays, objects)
+
+
+// object: dot notation is more preferred and readable.
+//if you know the name of the key: use dot notation
+//if the key name is dynamic, use square bracket notation.
+
+const key = 'username;
+obj[key] // it's going to turn it to username
+obj.key // it'd look for a key named 'key'
+
+let a = 5;
+a = 7; //overwrite
+
+//functions are objects
+
+//functions are always in yellow
+console.log : log is yellow
+
+this also works 
+console['log']
+console[myFunc]
+
+// c-style loop is a shorthand for while loop.
+
+//looping through an object. 
+//for..of: gives you value
+//for..in: gives you index -> workaround: console.log(obj[key])
+// 
+// for in : also iterates through prototype (the parent, grand parent)
+-> that's why Object.key is recommended bcs it doesn't iterate through prototype. 

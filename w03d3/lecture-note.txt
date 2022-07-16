@@ -1,0 +1,66 @@
+// HTTP
+- request/response cycle
+- request contains a verb and a path (GET /urls)
+- response must contain a status code; may or may not contain a body
+- "stateless" protocol; neither the server nor the client have to rememebr any previous communication
+
+- security
+
+
+serve up: give this info away 
+what is the server responsible for
+
+
+//gitignore:
+- node_modules
+- .DS_Store (particular to mac, stores view 
+- languages.json
+
+configuration - icon view, list view in this file..)
+
+ls -l: shows file
+ls- la : shows hidden file
+ls -lA (capital a)
+
+$ npm install express morgan ejs
+
+const port = process.env.PORT || 3001; 
+              if left is true, then it doesn't even look at the right.
+
+
+^ process represents node.
+env is an object that contains all variables in the memory.
+take a look at the .env pacakge if curious.
+
+
+// render looks at views folder and automatically finds the template.ejs
+res.render('home')  -> /views, home.ejs
+
+// require .json file automatically parses the json. OR js.
+// require: json & js
+// .ext.. imge file. log file - we should use fs.readFILE
+
+
+//cookies are always set on the server side.
+
+
+
+// updating data.. 
+for langauge choices: fr, kr, ...etc. 
+originally we should use post, because it's updating the first locale choice to the next locale choice.
+we are just using get for the brevity.
+
+
+// res.cookie(nae, value, {options object})
+option: ttl (time to leave) -- 15min 
+
+//to read the cookies, we need to bring a cookie parser.
+//(req.cookies.language)
+//for res.cookie: we don't need cookie parser
+
+
+//all cookies are strings, they are all header of the request. (if we console log the header). then we need to take it apart ourselves, and it's a lot of work. We use cookie parser.
+
+//if req.body is showing 'undefined' it means we didn't set up body parser.
+
+

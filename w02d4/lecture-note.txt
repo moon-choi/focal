@@ -1,0 +1,21 @@
+// promise는 object
+
+// promise 3가지 상태
+1. 성공 resolved
+2. 판정대기중 pending
+4. 실패 rejected
+
+// 프로미스는 비동기가 아님. 콜백함수의 대체품일뿐.
+
+유사한 문법
+// $.ajax().done
+          .fail 
+
+//fetch() : 항상 프로미스를 리턴함.. 이자리에 프로미스가 남음. 
+fetch().then().catch()
+
+
+//asynchronous: it won't ever start until the main thread is done. 
+
+
+//Promise.race: 제일 빠른것만 리턴하고 끝냄. 

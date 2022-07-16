@@ -1,0 +1,52 @@
+// web servers
+- speak HTTP (for the most part)
+
+- TCP is low level connection betwen machines (highway)
+
+- HTTP sits on top of TCP 
+- TCP sends info whenever we want (either party)
+
+- TCP requires 
+-- IP address (localhost)
+-- POST 
+
+- HTTP: request/response cycle (trucks carrying info)
+  - request   
+    - verb / method : what we want to do
+      - GET: retrieve info from a server
+      - POST: send info to the server
+    - path: what we want to do it to 
+      - /users, /videos,
+    - Response:
+      - may or may not contain info.
+
+                          request 
+client <== http / tcp ==> server
+server.on("connection", (connection) => {
+  connection.write('hello')
+});
+server.on('request'), (request, response) => {
+  response.write('hello')  // only once chance to respond
+  response.end();
+}) //we need object to represent request and response
+
+
+node.js
+
+xxx listner: it means it's optional 
+
+
+// Middleware
+- sits / runs between the request and the response
+- usually used for parsing or authentication
+
+                                                    request
+client <== http / tcp ==> server / middleware     middleware    middleware  / RouthHandler
+                                   parse cookies   parse body    logger
+                                  
+middleware: bunch of different functions.
+
+{
+  "username": 'jstamos'.
+  "password": '1234'
+} //JSON

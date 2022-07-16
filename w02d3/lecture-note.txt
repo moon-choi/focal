@@ -1,0 +1,91 @@
+// Client & server
+- the majority of networking is made up of server/client connections
+
+- servers have info and clients want info 
+
+// Internet protocol (street address)
+- IPv4: 192.168.1.12
+- IPv6: 2001:deb8: ...... --> HEX.
+
+// Port 
+- port identifies the application (apartment number)
+- we have 65,535 ports to choose from (per internet connection)
+- popular ports:
+  - HTTP: 80
+  - HTTPS: 443
+  - FTP: 21
+  - SMTP: 25 mail.
+  - SSH: 22 (Vagrant)
+  - Postgrest: 5432 
+
+// Transport Layer Protocols
+  - Break datat into packets to be sent over the network Layer
+  - Give each packet a header with origin and destination
+  - UDP: User datagram protocol
+      - when you want just really low latency, fast connection. sacrifcing chance of losing packets for real time connection.
+      - smaller header size ( 8 bytes ) which results in smaller packet sizes 
+      - connectionless.
+      - no error recovery (ny corrupted - packets are discarded)
+      - packets can arrive in any order
+
+  - TCP: Transportation control protocol  
+      - Larger header size (20 bytes)
+      - requires a connection (3 way handshake)
+      - Corrupted packets are reported to the server and are re-sent. (you don't lose any data)
+      - packets arrive in order-useful when guaranteed communication is needed
+
+
+// header: section of a packet that contains all the info. 
+A packet header is the portion of an IP (Internet protocol) packet that precedes its body and contains addressing and other data that is required for it to reach its intended destination.
+
+
+- TCP: origin, destination 
+- HTTP: encoding, content type, meta data
+
+
+  // Packets: Data broken down into chunckss, and get reformed on the other hand. 
+  1mb image -> broken down into 20-60 bytes so it can be sent over to the network. 
+
+// client - serveer: 3 way hand shake
+- do you want to talk to me?
+- yes i do
+- okay i understand you want to talk to me
+
+
+// HTTP (Hypertext Transfer Protocol)
+- Built on top of the TCP layer
+- Call(Request) and response comunication
+- state-less: nothing is held in memory. no memory of any previous communication (cookies is the main to provide memory to the server)
+- all routes to resources require 1. method (verb) 2. path.
+- methods: get, post, put, delete, patch
+- paths: '/users'
+
+- TCP: highway.. underlying path.. will make the connection.
+- HTTP: Vehicle, will make a call over TCP. 
+- response headers contain information about the response such as media type and content size
+- response body contains the content (JSON, HTML, etc)
+
+
+
+
+
+// tcp: 컴퓨터가 다른 컴퓨터와 데이터 통신하기 위한 프로토콜
+
+// protocol: 컴퓨터가 서로 대화를 주고받는 방식에 대한 약속
+
+// tcp 연결방식: ip주소와 포트가 필요.
+송신자--네트워크---수신자
+
+// ip주소 = 주소 (Internet Protocol)
+포트 - 택배 주문자.
+
+
+//질문
+what's a socket?
+
+//what does 'on' do?
+The .on method lets you specify an event name and a function that does something when that event happens.
+// what is a net module?
+Net (net) is a module that is built into Node. It allows our Node apps to use TCP.
+
+
